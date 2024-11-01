@@ -38,15 +38,15 @@ void main() {
         ),
       );
 
-      expect(find.text('25th frame'), findsNothing);
+      expect(find.text(text), findsNothing);
 
       await tester.pump(delay);
 
-      expect(find.text('25th frame'), findsOneWidget);
+      expect(find.text(text), findsOneWidget);
 
       await tester.pump(frame25Delay);
 
-      expect(find.text('25th frame'), findsNothing);
+      expect(find.text(text), findsNothing);
     });
   });
 }
