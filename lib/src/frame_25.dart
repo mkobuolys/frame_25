@@ -108,8 +108,6 @@ class Frame25 extends StatefulWidget {
 }
 
 class _Frame25State extends State<Frame25> with WidgetsBindingObserver {
-  late final Timer _timer;
-
   final _frame25DelayInMilliseconds = (1 / 24 * 1000).round();
   var _frameVisible = false;
 
@@ -122,14 +120,7 @@ class _Frame25State extends State<Frame25> with WidgetsBindingObserver {
           milliseconds: Random().nextInt(widget.maxDelayInMilliseconds) + 1000,
         );
 
-    _timer = Timer(delay, () => _setFrameVisible(true));
-  }
-
-  @override
-  void dispose() {
-    _timer.cancel();
-
-    super.dispose();
+    Future.delayed(delay, () => _setFrameVisible(true));
   }
 
   void _setFrameVisible(bool value) {
