@@ -6,6 +6,9 @@ repository: https://github.com/mkobuolys/frame_25
 issue_tracker: https://github.com/mkobuolys/frame_25/issues
 funding:
   - https://github.com/sponsors/mkobuolys
+screenshots:
+  - description: The 25th frame package logo.
+    path: images/logo.png
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
