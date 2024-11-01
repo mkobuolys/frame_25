@@ -1,39 +1,62 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+A Flutter package to show the mysterious 25th frame in your apps.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+![25th Frame logo](https://github.com/mkobuolys/frame_25/blob/main/images/logo.png?raw=true)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+## What is the 25th frame?
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+The 25th frame is a mysterious frame that is shown for a very short time in movies and TV shows. It is said that this frame can influence the viewer's subconscious mind.
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+This package allows you to show the 25th frame in your Flutter apps.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+Add the `frame_25` dependency to your `pubspec.yaml` file:
 
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  frame_25:
 ```
 
-## Additional information
+Wrap the widget you want to show the 25th frame on with a `Frame25` widget:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+class MyWidget extends StatelessWidget {
+  const MyWidget();
+
+  @override
+  Widget build(BuildContext context) {
+    return Frame25.random(
+      frame25: Container(color: Colors.red),
+      maxDelayInMilliseconds: 3000,
+      child: const ColoredBox(
+        color: Colors.blue,
+        child: Center(
+          child: Text("Don't blink!"),
+        ),
+      ),
+    );
+  }
+}
+```
+
+If you want to show the 25th frame after a specific delay, you can use the `Frame25.delayed` constructor:
+
+```dart
+class MyWidget extends StatelessWidget {
+  const MyWidget();
+
+  @override
+  Widget build(BuildContext context) {
+    return Frame25.delayed(
+      frame25: Container(color: Colors.red),
+      delay: const Duration(milliseconds: 3000),
+      child: const ColoredBox(
+        color: Colors.blue,
+        child: Center(
+          child: Text("Don't blink!"),
+        ),
+      ),
+    );
+  }
+}
+```
