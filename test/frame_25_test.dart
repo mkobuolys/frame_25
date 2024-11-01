@@ -22,7 +22,6 @@ void main() {
       expect(find.text('25th frame'), findsNothing);
 
       await tester.pump(delay);
-      await tester.pump(frame25Delay);
 
       expect(find.text('25th frame'), findsOneWidget);
 

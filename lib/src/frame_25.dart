@@ -126,6 +126,8 @@ class _Frame25State extends State<Frame25> with WidgetsBindingObserver {
   void _setFrameVisible(bool value) {
     if (_frameVisible == value) return;
 
+    if (value) return setState(() => _frameVisible = value);
+
     Future.delayed(Duration(milliseconds: _frame25DelayInMilliseconds), () {
       if (mounted) setState(() => _frameVisible = value);
     });
