@@ -1,3 +1,7 @@
+## 0.1.2
+
+- chore: add topics
+
 ## 0.1.1
 
 - fix: extraneous frame delay

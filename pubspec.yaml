@@ -1,6 +1,6 @@
 name: frame_25
 description: A Flutter package to show the mysterious 25th frame in your apps.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/mkobuolys/frame_25
 repository: https://github.com/mkobuolys/frame_25
 issue_tracker: https://github.com/mkobuolys/frame_25/issues
@@ -9,6 +9,10 @@ funding:
 screenshots:
   - description: The 25th frame package logo.
     path: images/logo.png
+topics:
+  - flutter
+  - ui
+  - widget
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
